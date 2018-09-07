@@ -21,6 +21,12 @@
       <scope>test</scope>
       <type>jar</type>
     </dependency>
+
+    <dependency>
+      <groupId>org.processing</groupId>
+      <artifactId>core</artifactId>
+      <version>3.3.7</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -37,7 +43,6 @@
               <classpathPrefix>lib/</classpathPrefix>
               <addClasspath>true</addClasspath>
               <useUniqueVersions>false</useUniqueVersions>
-              <mainClass>GuessingGame</mainClass>
             </manifest>
           </archive>
         </configuration>
