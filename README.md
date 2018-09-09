@@ -24,10 +24,6 @@ There are a lot of steps here! Don't try to memorize them. Whenever you click ne
 
 I will add examples here as I prepare for lectures throughout the Fall. When you import this repository, you will not have all the things I haven't built yet, but we can ask Eclipse to download my changes!
 
-1. If you've made changes, you must save them!
-    1. Right-Click on this project in Eclipse, then go to "Team" and choose "Commit" (close to bottom).
-    2. Press the "++" icon next to Unstaged changes. Everything you changed will move down to the bottom box.
-    2. In the tab that appears on the bottom, type in "I was studying!" to the "Commit Message" box.
-    3. Click the "Commit" button.
-2. Now you can pull in changes:
-    1. Right-Click on this project in Eclipse, then go to "Team" and choose "Pull" (close to top).
+Right-Click on this project in Eclipse, then go to "Team" and choose "Pull" (close to top).
+
+This should be all you need! If, for some reason, you and I have edited the same files, I can help you through the steps of either resetting your file ***or*** you can import a new copy of this repository.
