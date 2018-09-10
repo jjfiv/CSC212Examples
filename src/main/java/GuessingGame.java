@@ -17,18 +17,23 @@ public class GuessingGame {
 		
 		// Create a random number generator:
 		Random rand = new Random();
-		
+				
 		// Select a secret number.
 		final int secretNumber = rand.nextInt(HIGH-LOW) + LOW;
 		System.out.println("Welcome to the Guessing Game.");
 		System.out.println("I have selected a number from ["+LOW+","+HIGH+").");
 		
-		// Set the current guess to something that can't be correct.
-		int guess = LOW - 1;
 
 		// We use a Scanner to turn characters from System.in into numbers.
 		Scanner scanner = new Scanner(System.in);
-
+		
+		// Set the current guess to something that can't be correct.
+		int guess;
+		do {
+			guess = scanner.nextInt();
+			// ... code ...
+		} while (guess != secretNumber);
+		
 		while(guess != secretNumber) {
 			System.out.println("What is your guess? ");
 			try {
