@@ -4,6 +4,6 @@ public class Hello {
 		System.out.println(message);
 	}
 	public static void main(String[] args) {
-		print("I can't believe this works!");
+		print("I can't believe this works (or seems to)!");
 	}
 }
