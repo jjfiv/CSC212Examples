@@ -3,16 +3,9 @@ package edu.smith.cs.csc212.fishes;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Shape;
-import java.awt.geom.AffineTransform;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 
-/**
- * This code based on the Python fish in CSC111 labs, e.g.,
- * https://jcrouser.github.io/CSC111/labs/lab-10-animation.html
- * 
- * @author jfoley
- */
 public class AquariumCreatures {
 	/**
 	 * Kudos to Group 7, (Fall 2018).
@@ -65,6 +58,12 @@ public class AquariumCreatures {
 		
 	}
 	
+	/**
+	 * This code based on the Python fish in CSC111 labs, e.g.,
+	 * https://jcrouser.github.io/CSC111/labs/lab-10-animation.html
+	 * 
+	 * @author jfoley
+	 */
 	public static void drawFishFacingLeft(Graphics2D g, Color color, int x, int y) {
 		// Draw the fish.
 		g.setColor(color);
@@ -91,6 +90,15 @@ public class AquariumCreatures {
 		g.setColor(Color.black);
 		g.draw(tail);
 	}
+	/**
+	 * This method is implemented by creating a new Graphics "world" located at x,y
+	 * that is scaled in a "backwards" X world.
+	 * 
+	 * @param g the original graphics world.
+	 * @param color the color of the fish!
+	 * @param x the x-coordinate of the position to draw the fish.
+	 * @param y the y-coordinate of the position to draw the fish.
+	 */
 	public static void drawFishFacingRight(Graphics2D g, Color color, int x, int y) {
 		Graphics2D flipped = (Graphics2D) g.create();
 		flipped.translate(x, y);
@@ -98,26 +106,21 @@ public class AquariumCreatures {
 		drawFishFacingLeft(flipped, color, 0, 0);
 		flipped.dispose();
 	}
-	
+
+	/**
+	 * This method is implemented by creating a new Graphics "world" located at x,y
+	 * that is half the size of a regular one and calling our regular Fish method.
+	 * 
+	 * @param g the original graphics world.
+	 * @param color the color of the fish!
+	 * @param x the x-coordinate of the position to draw the fish.
+	 * @param y the y-coordinate of the position to draw the fish.
+	 */
 	public static void drawSmallFishFacingLeft(Graphics2D g, Color color, int x, int y) {
-		// Draw the fish.
-		g.setColor(color);
-		g.fillOval(x-20, y-10, 40, 20);
-		
-		// draw body outline.
-		g.setColor(Color.black);
-		g.drawOval(x-20, y-10, 40, 20);
-		
-		// draw eye (still black):
-		g.fillOval(x-7, y-5, 5, 5);
-		
-		// draw tail:
-		Color tailColor = color.darker();
-		g.setColor(tailColor);
-		g.fillOval(x+15, y-15, 10, 30);
-		
-		// draw tail outline:
-		g.setColor(Color.black);
-		g.drawOval(x+15, y-15, 10, 30);
+		Graphics2D halfSize = (Graphics2D) g.create();
+		halfSize.translate(x, y);
+		halfSize.scale(0.5, 0.5);
+		drawFishFacingLeft(halfSize, color, 0, 0);
+		halfSize.dispose();
 	}
 }

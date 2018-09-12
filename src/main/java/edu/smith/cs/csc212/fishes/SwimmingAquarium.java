@@ -24,7 +24,6 @@ public class SwimmingAquarium extends GFX {
 		// What if we wanted this little fish to swim, too?
 		AquariumCreatures.drawSmallFishFacingLeft(g, Color.red, 200, 100);
 
-		
 		// Move the fish!
 		fish1X -= 1;
 		fish2X += 2;
