@@ -1,4 +1,4 @@
-package edu.smith.cs.csc212;
+package edu.smith.cs.csc212.oop;
 
 public class AirConditioning {
   /**
@@ -60,6 +60,7 @@ public class AirConditioning {
     this.power = power;
     this.turnOffAt = turnOffAt;
     this.turnOnAt = turnOnAt;
+    this.running = false;
   }
 
   /**
