@@ -1,4 +1,4 @@
-# CSC212Examples
+# CSC212Examples [![Build Status](https://travis-ci.org/jjfiv/CSC212Examples.svg?branch=master)](https://travis-ci.org/jjfiv/CSC212Examples)
 A collection of Java code that I use during in-class examples. Use this repo as a starting point for at-home study and experimentation!
 
 ## How to import this project into Eclipse
