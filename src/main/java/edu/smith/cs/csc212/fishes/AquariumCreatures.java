@@ -58,6 +58,13 @@ public class AquariumCreatures {
 		
 	}
 	
+	public static void drawSnailXY(Graphics2D g, Color bodyColor, Color shellColor, Color eyeColor, int x, int y) {
+	  Graphics2D translated = (Graphics2D) g;
+	  translated.translate(x, y);
+	  drawSnail(translated, bodyColor, shellColor, eyeColor);
+	  translated.dispose();
+	}
+	
 	/**
 	 * This code based on the Python fish in CSC111 labs, e.g.,
 	 * https://jcrouser.github.io/CSC111/labs/lab-10-animation.html
