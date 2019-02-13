@@ -1,4 +1,4 @@
-package edu.smith.cs.csc212;
+package edu.smith.cs.csc212.gfx;
 
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
